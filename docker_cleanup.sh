@@ -8,5 +8,7 @@ echo "Removing all images..."
 docker rmi $(docker image ls -q)
 echo "Removing all volumes..."
 docker volume rm $(docker volume ls -q)
+echo "Removing all networks..."
+docker network rm $(docker network ls -q)
 
 #rm -rf docker-compose.yml
